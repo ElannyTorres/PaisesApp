@@ -1,16 +1,21 @@
-<p>Por Capital</p>
-<hr>
+<div class="animate__animated animate__fadeIn animate__faster">
 
-<div class="row">
-  <div class="col">
-    <app-pais-input
-      (onEnter)="buscar($event)"
-      placeholder="Buscar capital..."
-    ></app-pais-input>
+  <p>Por Capital</p>
+  <hr>
+
+  <div class="row">
+    <div class="col">
+      <app-pais-input
+        (onEnter)="buscar($event)"
+        placeholder="Buscar capital..."
+      ></app-pais-input>
+    </div>
   </div>
-</div>
 
   <hr>
+
+</div>
+
 
   <div *ngIf="hayError"
       class="alert alert-danger">
