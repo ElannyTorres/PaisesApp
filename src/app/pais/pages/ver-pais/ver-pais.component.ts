@@ -33,7 +33,10 @@ export class VerPaisComponent implements OnInit {
 
     this.activatedRoute.params
       .pipe(
-        switchMap( ({id}) => this.paisService.getPaisPorAlpha(id)),
+        switchMap( ({id}) => {
+          console.log(id);
+          return this.paisService.getPaisPorAlpha(id)
+        }),
         tap( console.log )
       )
       .subscribe( pais => {
